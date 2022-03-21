@@ -4,15 +4,28 @@ public class Driver{
 		
 		Department[] arr = new Department[3];
 		
-		arr[0]=new Department(9865,"Physics","Saman");
-		arr[1]=new Department(6846,"Chemistry","Nuwan");
-		arr[2]=new Department(3254,"Mathematics","Namal");
-		Faculty fac = new Faculty (1234,"Science","Nimal",arr);
+		arr[0]=new Department(9865,"Physics");
+		arr[1]=new Department(6846,"Chemistry");
+		arr[2]=new Department(3254,"Mathematics");
+		Faculty fac = new Faculty (1234,"Science",arr);
 		
 		Department[] arr2 = new Department[2];
-		arr2[0]=new Department(2576,"Civil","Kasun");
-		arr2[1]=new Department(4523,"Mechanical","Dinesh");
-		Faculty fac2 = new Faculty (3784,"Engineering","Supun",arr2);
+		arr2[0]=new Department(2576,"Civil");
+		arr2[1]=new Department(4523,"Mechanical");
+		Faculty fac2 = new Faculty (3784,"Engineering",arr2);
+
+		// set dean
+		fac.setdean("Nimal");
+		fac2.setdean("Supun");
+
+		//set head of Science
+		fac.dep[0].sethed("Saman");
+		fac.dep[1].sethed("Nuwan");
+		fac.dep[2].sethed("Namal");
+
+		//set head of Engineering fac
+		fac2.dep[0].sethed("Kasun");
+		fac2.dep[1].sethed("Dinesh");
 		
 		
 		System.out.println("Science dean "+fac.getdean());
