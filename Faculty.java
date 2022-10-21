@@ -23,5 +23,5 @@ public class Faculty {
 		
 		return nam_of_dean;
 	}
-	
+	//check
 }
